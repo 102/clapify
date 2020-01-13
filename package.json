@@ -1,0 +1,22 @@
+{
+  "name": "clapify",
+  "version": "0.1.0",
+  "description": "Emphasize👏your👏opinion",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/102/clapify.git"
+  },
+  "keywords": [
+    "clapify"
+  ],
+  "author": "Roman Gusev <rgusev2@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/102/clapify/issues"
+  },
+  "homepage": "https://github.com/102/clapify#readme"
+}
