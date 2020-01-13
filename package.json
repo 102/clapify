@@ -4,7 +4,9 @@
   "description": "Emphasize👏your👏opinion",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "start": "parcel demo.html",
+    "build": "rimraf docs && parcel build demo.html -d docs -o index.html && touch docs/.nojekyll"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/102/clapify/issues"
   },
-  "homepage": "https://github.com/102/clapify#readme"
+  "homepage": "https://github.com/102/clapify#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "rimraf": "^3.0.0",
+    "touch": "^3.1.0"
+  }
 }
