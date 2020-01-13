@@ -3,4 +3,4 @@ function e(e){return e.replace(/\s+/g,"👏")}module.exports=e;
 },{}],"lgAh":[function(require,module,exports) {
 var e=require("."),r=document.querySelector("textarea"),t=document.querySelector("p");t.innerText=e(r.value),r.addEventListener("input",function(r){t.innerText=e(r.currentTarget.value)});
 },{".":"Focm"}]},{},["lgAh"], null)
-//# sourceMappingURL=/demo.66022c5b.js.map
+//# sourceMappingURL=demo.66022c5b.js.map
