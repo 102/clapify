@@ -4,7 +4,7 @@
   "description": "Emphasize👏your👏opinion",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/102/clapify/issues"
   },
-  "homepage": "https://github.com/102/clapify#readme"
+  "homepage": "https://github.com/102/clapify#readme",
+  "devDependencies": {
+    "fast-check": "^1.21.0",
+    "jest": "^24.9.0"
+  }
 }
