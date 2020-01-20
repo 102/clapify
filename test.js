@@ -1,17 +1,7 @@
-const assert = require("assert");
+const fc = require("fast-check");
 const clapify = require(".");
 
-const testEqual = (message, a, b) => {
-  try {
-    assert.equal(a, b);
-    console.log(`PASS ${message}`);
-  } catch (error) {
-    console.error(`FAIL ${message} with values "%s" "%s"`, a, b);
-    process.exitCode = 1;
-  }
-};
-
-[
+it.each([
   ["does not modify text without space symbols", "test", "test"],
   ["replaces single space with clap emoji", "test test", "test👏test"],
   [
@@ -30,6 +20,12 @@ test`,
     "this is not a joke",
     "this👏is👏not👏a👏joke"
   ]
-].forEach(([message, text, expected]) => {
-  testEqual(message, clapify(text), expected);
-});
+])("%s", (_, text, expected) => void expect(clapify(text)).toEqual(expected));
+
+it("is idempotent", () =>
+  fc.assert(
+    fc.property(fc.lorem(), text => {
+      const clapifiedOnce = clapify(text);
+      return clapifiedOnce === clapify(clapifiedOnce);
+    })
+  ));
